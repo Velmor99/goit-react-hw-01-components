@@ -4,8 +4,7 @@ import Profile from './components/profile/Profile'
 import user from './components/profile/user.json'
 
 import FriendsList from './components/friendlist/FriendList'
-import friends from './components/friendlist/friends-list.json'
-import FriendListItem from './components/friendlist/FriendListItem'
+import friendsList from './components/friendlist/friends-list.json'
 
 import Statistics from './components/statistics/Statistics'
 import stats from './components/statistics/statistics-data.json'
@@ -27,8 +26,7 @@ export default function App () {
             likes={user.stats.likes}
             />
 
-            <FriendsList>
-                <FriendListItem friends={friends}></FriendListItem>
+            <FriendsList friends={friendsList}>
             </FriendsList>
 
             <Statistics title={"Upload stats"} stats={stats}/>

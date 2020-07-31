@@ -3,16 +3,14 @@ import styles from './friendlist.module.css'
 import PropTypes from 'prop-types';
 
 
-export default function ListItem ({friends}) {
+export default function ListItem ({id, isOnline, avatar, name}) {
     return (
         <>
-        {friends.map(item => (
-            <li key={item.id} className={styles.item}>
-            <span className={!item.isOnline ? styles.status : styles.isOnline}>{item.isOnline}</span>
-            <img className={styles.avatar} src={item.avatar} alt="" width="48" />
-            <p className={styles.name}>{item.name}</p>
+        <li key={id} className={styles.item}>
+            <span className={!isOnline ? styles.status : styles.isOnline}>{isOnline}</span>
+            <img className={styles.avatar} src={avatar} alt="" width="48" />
+            <p className={styles.name}>{name}</p>
         </li>
-        ))}
         </>
     )
 }
